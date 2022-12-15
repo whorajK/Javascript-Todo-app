@@ -40,23 +40,121 @@ input::placeholder {
 	font-weight: normal;
 }
 
-h1 {
-	color: #b7b6b6;
-	font-size: 5rem;
-	margin-bottom: 2rem;
-}
-
-ul {
-	margin: 2rem auto;
+h2 {
+	font-size: 1.25rem;
 }
 
 li {
-	cursor: pointer;
 	list-style: none;
+	overflow: hidden;
+	padding: 0.5rem 1rem;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* HEADER SECTION */
+.header {
+	margin-top: 1rem;
+}
+
+.header__title {
+	color: #b7b6b6;
+	font-size: 5rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+/* MAIN SECTION */
+main {
+	min-height: 70vh;
+}
+
+form {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+form input {
+	flex: 1;
+}
+
+form,
+.todo_list {
+	width: calc(100vw - 5rem);
+}
+
+.todo_list {
+	margin: 2rem auto;
+}
+
+.todo_list > div {
+	align-items: center;
+	box-shadow: 0 1px 3px gray;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+	padding: 1rem;
+}
+
+.delete_btn {
+	background: inherit;
+	border: none;
+	padding: 0;
+}
+
+.delete_btn:hover {
+	color: tomato;
+}
+
+/* FOOTER SECTION */
+.footer {
+	background-color: #fff;
+	padding: 1rem;
+}
+
+.footer__h2 {
+	text-align: center;
 }
 
 /* UTILITY CLASSES */
 .completed {
 	color: #646464;
 	text-decoration: line-through;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 459px) {
+	h1 {
+		font-size: 3rem;
+	}
+
+	form,
+	.todo_list {
+		width: calc(100vw - 1rem);
+	}
+
+	form {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	form button,
+	form input {
+		font-size: 1rem;
+		width: 100%;
+	}
+
+	form button {
+		padding: 0.75rem;
+	}
+
+	.footer__h2 {
+		font-size: 1rem;
+	}
 }

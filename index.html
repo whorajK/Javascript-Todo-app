@@ -9,18 +9,33 @@
 		<script src="script.js" defer></script>
 	</head>
 	<body>
-		<h1 class="title">Todos</h1>
+		<!-- HEADER SECTION -->
+		<header class="header">
+			<h1 class="header__title">Todos</h1>
+		</header>
 
-		<form id="form">
-			<input
-				type="text"
-				id="input"
-				placeholder="Enter a todo"
-				autocomplete="off"
-			/>
-			<button type="submit" id="add-btn">Add</button>
-		</form>
+		<main>
+			<!-- ADD TASK FORM -->
+			<form id="form">
+				<input
+					type="text"
+					id="input"
+					placeholder="Enter a todo"
+					autocomplete="off"
+				/>
+				<button type="submit" id="add-btn">Add</button>
+			</form>
 
-		<ul class="todo__list" id="todo-list"></ul>
+			<!-- TODOS -->
+
+			<ul class="todo_list" id="todo-list"></ul>
+		</main>
+
+		<!-- FOOTER SECTION -->
+		<footer class="footer">
+			<h2 class="footer__h2">
+				Created by <a href="https://github.com/whorajK"> Raj Changappa </a>
+			</h2>
+		</footer>
 	</body>
 </html>
